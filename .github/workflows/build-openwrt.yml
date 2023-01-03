@@ -71,8 +71,8 @@ jobs:
     - name: Import external feeds - passwall
       working-directory: ./openwrt
       run: |
-        git clone https://github.com/kenzok8/openwrt-packages.git package/kenzo
-    #    git clone "your_github_link" package/"your_folder_name" 
+        git clone https://github.com/xiaorouji/openwrt-passwall pakcage/passwall
+        git clone https://github.com/vernesong/OpenClash package/openclash
     
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
