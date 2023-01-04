@@ -71,11 +71,11 @@ jobs:
         sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
         git pull
     
-    - name: Import external feeds - passwall
-      working-directory: ./openwrt
-      run: |
-        git clone https://github.com/xiaorouji/openwrt-passwall pakcage/passwall
-        git clone https://github.com/vernesong/OpenClash package/openclash
+  #  - name: Import external feeds - passwall
+  #    working-directory: ./openwrt
+  #    run: |
+  #      git clone https://github.com/xiaorouji/openwrt-passwall pakcage/passwall
+  #      git clone https://github.com/vernesong/OpenClash package/openclash
     
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
